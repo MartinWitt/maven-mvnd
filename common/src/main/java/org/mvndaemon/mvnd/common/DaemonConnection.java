@@ -78,7 +78,7 @@ public class DaemonConnection implements AutoCloseable {
             return Message.read(input);
         } catch (EOFException e) {
             if (LOGGER.isDebugEnabled()) {
-                LOGGER.debug("Discarding EOFException: {}", e.toString(), e);
+                LOGGER.debug("Discarding EOFException: {}", e, e);
             }
             return null;
         } catch (IOException e) {
